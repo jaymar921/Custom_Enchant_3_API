@@ -18,6 +18,7 @@
   <version>2538730740</version>
 </dependency>
 ```
+[![](https://jitpack.io/v/jaymar921/Custom_Enchant_3_API.svg)](https://jitpack.io/#jaymar921/Custom_Enchant_3_API)
 # How to use the API
 > Creating a class that checks if CustomEnchantments3 Plugin exist
 ```java
