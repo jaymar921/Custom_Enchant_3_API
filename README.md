@@ -15,7 +15,7 @@
 <dependency>
   <groupId>com.github.jaymar921</groupId>
   <artifactId>Custom_Enchant_3_API</artifactId>
-  <version>474f32a204</version>
+  <version>33d8bad693</version>
 </dependency>
 ```
 # How to use the API
