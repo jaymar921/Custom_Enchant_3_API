@@ -156,7 +156,7 @@ public class PlayerAdapter{
     }
 
     public double getPhysicalResistance(){
-        // get helmet level enchant magic resist
+        // get helmet level enchant physical resist
         int helmet = 0;
         int chestplate = 0;
         int leggings = 0;
