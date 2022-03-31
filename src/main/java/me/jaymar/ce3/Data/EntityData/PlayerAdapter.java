@@ -174,7 +174,7 @@ public class PlayerAdapter{
         if(getEnchants(player.getInventory().getBoots()).containsKey(EnchantmentsHolder.TANK))
             boots = getEnchants(player.getInventory().getBoots()).get(EnchantmentsHolder.TANK);
 
-        return (((double) (helmet+chestplate+leggings+boots)/16)*100*0.5)/100; // basically 16 total levels is equivalent to 50% magic resist
+        return (((double) (helmet+chestplate+leggings+boots)/16)*100*0.5)/100; // basically 16 total levels is equivalent to 50% physical resist
     }
 
     public Map<Enchantment,Integer> getEnchants(ItemStack item){
