@@ -1,7 +1,5 @@
 package me.jaymar.ce3.Data.EntityData;
 
-import me.jaymar.ce3.Data.Enchantments.EnchantmentsHolder;
-import me.jaymar.ce3.PluginCore;
 import me.jaymar.ce3.Utility.CE_Utility;
 import org.bukkit.Location;
 import org.bukkit.attribute.Attribute;
@@ -134,47 +132,11 @@ public class PlayerAdapter{
     }
 
     public double getMagicResist(){
-        // get helmet level enchant magic resist
-        int helmet = 0;
-        int chestplate = 0;
-        int leggings = 0;
-        int boots = 0;
-        //helmet
-        if(getEnchants(player.getInventory().getHelmet()).containsKey(EnchantmentsHolder.MAGIC_RESIST))
-            helmet = getEnchants(player.getInventory().getHelmet()).get(EnchantmentsHolder.MAGIC_RESIST);
-        //chestplate
-        if(getEnchants(player.getInventory().getChestplate()).containsKey(EnchantmentsHolder.MAGIC_RESIST))
-            chestplate = getEnchants(player.getInventory().getChestplate()).get(EnchantmentsHolder.MAGIC_RESIST);
-        // leggings
-        if(getEnchants(player.getInventory().getLeggings()).containsKey(EnchantmentsHolder.MAGIC_RESIST))
-            leggings = getEnchants(player.getInventory().getLeggings()).get(EnchantmentsHolder.MAGIC_RESIST);
-        // boots
-        if(getEnchants(player.getInventory().getBoots()).containsKey(EnchantmentsHolder.MAGIC_RESIST))
-            boots = getEnchants(player.getInventory().getBoots()).get(EnchantmentsHolder.MAGIC_RESIST);
-
-        return (((double) (helmet+chestplate+leggings+boots)/16)*100*0.5)/100; // basically 16 total levels is equivalent to 50% magic resist
+        return 0;
     }
 
     public double getPhysicalResistance(){
-        // get helmet level enchant physical resist
-        int helmet = 0;
-        int chestplate = 0;
-        int leggings = 0;
-        int boots = 0;
-        //helmet
-        if(getEnchants(player.getInventory().getHelmet()).containsKey(EnchantmentsHolder.TANK))
-            helmet = getEnchants(player.getInventory().getHelmet()).get(EnchantmentsHolder.TANK);
-        //chestplate
-        if(getEnchants(player.getInventory().getChestplate()).containsKey(EnchantmentsHolder.TANK))
-            chestplate = getEnchants(player.getInventory().getChestplate()).get(EnchantmentsHolder.TANK);
-        // leggings
-        if(getEnchants(player.getInventory().getLeggings()).containsKey(EnchantmentsHolder.TANK))
-            leggings = getEnchants(player.getInventory().getLeggings()).get(EnchantmentsHolder.TANK);
-        // boots
-        if(getEnchants(player.getInventory().getBoots()).containsKey(EnchantmentsHolder.TANK))
-            boots = getEnchants(player.getInventory().getBoots()).get(EnchantmentsHolder.TANK);
-
-        return (((double) (helmet+chestplate+leggings+boots)/16)*100*0.5)/100; // basically 16 total levels is equivalent to 50% physical resist
+        return 0;
     }
 
     public Map<Enchantment,Integer> getEnchants(ItemStack item){

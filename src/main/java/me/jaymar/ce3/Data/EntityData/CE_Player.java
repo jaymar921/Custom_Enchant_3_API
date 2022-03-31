@@ -1,7 +1,6 @@
 package me.jaymar.ce3.Data.EntityData;
 
 import me.jaymar.ce3.Errors.SkillDataNotFound;
-import me.jaymar.ce3.PluginCore;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.jetbrains.annotations.NotNull;
 
@@ -83,7 +82,6 @@ public class CE_Player implements ConfigurationSerializable {
     public @NotNull PlayerSkills getSkills(){
         if(skills!=null)
             return skills;
-        PluginCore.getPlugin(PluginCore.class).getLogger().info(new SkillDataNotFound().getMessage());
         skills = new PlayerSkills(1,1,0,0,0,0,0,0,0,0,0,0,0,0,0);
         return skills;
     }
