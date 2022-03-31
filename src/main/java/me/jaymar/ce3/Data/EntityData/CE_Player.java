@@ -16,7 +16,6 @@ import java.util.Map;
     movement speed
     player skills
  */
-
 public class CE_Player implements ConfigurationSerializable {
 
     private String uuid;

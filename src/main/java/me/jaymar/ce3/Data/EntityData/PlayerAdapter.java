@@ -14,6 +14,27 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/*
+    Class: PlayerAdapter
+
+    I highly required developers to use this class instead of CE_Player,
+    you can use this class to get the Player and the CE_Player data
+
+    how to use this class:
+        Lets put in scenario you want to get the intelligence level of the player from an event
+
+        @EventHandler
+        private void exampleEvent(SampleEvent event){
+            if(event.getEntity() instance of Player){
+
+                PlayerAdapter player = new PlayerAdapter((Player)event.getEntity());
+
+                if(player.getSkills().INTELLIGENCE > 1){
+                    player.getPlayer().sendMessage("Your intelligence level is above 1");
+                }
+            }
+        }
+ */
 public class PlayerAdapter{
 
     private final Player player;
