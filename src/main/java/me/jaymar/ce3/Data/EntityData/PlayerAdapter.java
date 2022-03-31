@@ -45,6 +45,8 @@ public class PlayerAdapter{
     public PlayerAdapter(Player player){
         this.player = player;
         ce_player = CE_Utility.getPlayer(player);
+        current_enchants = new HashMap<>();
+        off_hand_current_enchants = new HashMap<>();
     }
 
     public double getMaxHealth(){
