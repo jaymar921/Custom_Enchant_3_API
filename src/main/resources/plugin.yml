@@ -1,0 +1,18 @@
+name: CustomEnchantments3
+version: '${project.version}'
+main: me.jaymar.ce3.PluginCore
+api-version: 1.17
+authors: [ JayMar921, Sekai47, MikaPikaChu ]
+description: Custom Enchants 3 with RPG system addons
+website: https://www.spigotmc.org/resources/authors/jaymar921.1073076/
+
+commands:
+  customenchants:
+    description: 'Plugin Command'
+    aliases: [ce]
+    usage: '/customenchants [argument]'
+
+permissions:
+  customenchants.ce:
+    description: Permission to use /ce command
+    default: true
