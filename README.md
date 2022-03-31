@@ -14,6 +14,6 @@
 <dependency>
   <groupId>com.github.jaymar921</groupId>
   <artifactId>Custom_Enchant_3_API</artifactId>
-  <version>-SNAPSHOT</version>
+  <version>474f32a204</version>
 </dependency>
 ```
