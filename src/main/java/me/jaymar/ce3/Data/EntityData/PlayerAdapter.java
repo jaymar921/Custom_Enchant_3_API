@@ -45,28 +45,6 @@ public class PlayerAdapter{
     public PlayerAdapter(Player player){
         this.player = player;
         ce_player = CE_Utility.getPlayer(player);
-        current_enchants = new HashMap<>();
-        off_hand_current_enchants = new HashMap<>();
-
-        ItemStack item = player.getInventory().getItemInMainHand();
-        ItemMeta meta = item.getItemMeta();
-        if(meta != null){
-            if(meta.hasEnchants()){
-                for(Enchantment enchantment : meta.getEnchants().keySet()){
-                    current_enchants.put(enchantment,meta.getEnchantLevel(enchantment));
-                }
-            }
-        }
-
-        item = player.getInventory().getItemInOffHand();
-        meta = item.getItemMeta();
-        if(meta != null){
-            if(meta.hasEnchants()){
-                for(Enchantment enchantment : meta.getEnchants().keySet()){
-                    off_hand_current_enchants.put(enchantment,meta.getEnchantLevel(enchantment));
-                }
-            }
-        }
     }
 
     public double getMaxHealth(){
@@ -148,12 +126,7 @@ public class PlayerAdapter{
     }
 
     public void addMagicDamage(double damage, LivingEntity source){
-        damage *= 3; // 1 magic damage = 3 physical damage
-        if(source instanceof Player){// if attacker is a player
-            damage += (damage * new PlayerAdapter((Player) source).getSkills().SORCERER * 0.05); // add damage by 0.05 per sorcerer level
-            damage += (damage * new PlayerAdapter((Player) source).getSkills().MAGE * 0.3); // add damage by 0.3 per mage level
-        }
-        player.damage(damage - (damage * getMagicResist()),source);
+        
     }
 
     public double getMagicResist(){
@@ -166,16 +139,7 @@ public class PlayerAdapter{
 
     public Map<Enchantment,Integer> getEnchants(ItemStack item){
         Map<Enchantment, Integer> enchants = new HashMap<>();
-        if(item != null){
-            ItemMeta meta = item.getItemMeta();
-            if(meta != null){
-                if(meta.hasEnchants()){
-                    for(Enchantment enchantment : meta.getEnchants().keySet()){
-                        enchants.put(enchantment,meta.getEnchantLevel(enchantment));
-                    }
-                }
-            }
-        }
+        // ...
         return enchants;
     }
 
