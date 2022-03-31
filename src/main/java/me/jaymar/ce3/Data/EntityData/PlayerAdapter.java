@@ -122,6 +122,10 @@ public class PlayerAdapter{
             setMana(0);
         else setMana(getMana()-mana);
     }
+    
+    public String getName(){
+        return player.getName();
+    }
 
     public void setMana(double mana){
         ce_player.setMana(mana);
