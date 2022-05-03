@@ -17,7 +17,7 @@ public class LanguageData {
     }
 
     public static void set(){
-        setDefault();
+        
     }
 
 }
