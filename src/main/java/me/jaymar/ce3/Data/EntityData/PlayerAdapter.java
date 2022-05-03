@@ -244,9 +244,5 @@ public class PlayerAdapter{
         return false;
     }
 
-    public void playSound(Sound sound){
-        player.playSound(getLocation(),sound,1.0f,1.0f);
-    }
-
 
 }
