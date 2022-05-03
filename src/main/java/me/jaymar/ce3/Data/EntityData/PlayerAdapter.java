@@ -157,6 +157,99 @@ public class PlayerAdapter{
         return player.getLocation();
     }
 
+    public void sendMessage(String messages){
+        
+    }
+
+    public void deductLevel(int level){
+        
+    }
+
+    public int getLevel(){
+        return getPlayer().getLevel();
+    }
+
+    public int getSkillLevel(){
+        return getCE_Player().getSkills().LEVEL;
+    }
+
+    public void sendTitle(String title, String subtitle, int fadeIn, int stay, int fadeOut){
+        player.sendTitle(title,subtitle,fadeIn,stay,fadeOut);
+    }
+
+    /**
+     * Add Movement Speed
+     * @deprecated
+     * methods {@link PlayerAdapter#addMovementSpeed(double)} and {@link PlayerAdapter#deductMovementSpeed(double)} are deprecated.
+     * <p> Use {@link PlayerAdapter#addMovementSpeed(double,int)} instead.
+     *
+     * @param ms double - movement speed
+     */
+    @Deprecated
+    public void addMovementSpeed(double ms){
+        ce_player.setMovementSpeed(ms + getMovementSpeed());
+    }
+
+    /**
+     * Deduct Movement Speed
+     * @deprecated
+     * methods {@link PlayerAdapter#addMovementSpeed(double)} and {@link PlayerAdapter#deductMovementSpeed(double)} are deprecated.
+     * <p> Use {@link PlayerAdapter#addMovementSpeed(double,int)} instead.
+     *
+     * @param ms double - movement speed
+     */
+    @Deprecated
+    public void deductMovementSpeed(double ms){
+        ce_player.setMovementSpeed(getMovementSpeed() - ms);
+    }
+
+    public void addMovementSpeed(double ms, int time){
+        ce_player.setMovementSpeed(ms + getMovementSpeed());
+        new BukkitRunnable(){
+            public void run(){
+                ce_player.setMovementSpeed(getMovementSpeed() - ms);
+            }
+        }.runTaskLater(PluginCore.getPlugin(PluginCore.class),time*20L);
+    }
+
+    public void addManaRegen(double manaRegen,int time){
+        ce_player.setManaRegen(manaRegen + getManaRegen());
+        new BukkitRunnable(){
+            public void run(){
+                ce_player.setManaRegen(getManaRegen()-manaRegen);
+            }
+        }.runTaskLater(PluginCore.getPlugin(PluginCore.class), 20L * time);
+    }
+
+    public void setAttackSpeed(double value){
+        getPlayer().getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(4 + value);
+    }
+    public World getWorld(){
+        return player.getWorld();
+    }
+
+    public Classes getPlayerClass(){
+        return Classes.valueOf(ce_player.getPlayer_class());
+    }
+
+    public boolean nearEntity(String name){
+        for(Entity entity : player.getWorld().getNearbyEntities(player.getLocation(),8,8,8)){
+            if(entity instanceof LivingEntity){
+                if(entity.getType().name().contains(name))
+                    return true;
+                if(entity.getName().contains(name))
+                    return true;
+                if(entity.getCustomName() != null)
+                    if(entity.getCustomName().contains(name))
+                        return true;
+            }
+        }
+        return false;
+    }
+
+    public void playSound(Sound sound){
+        player.playSound(getLocation(),sound,1.0f,1.0f);
+    }
 
 
 }
