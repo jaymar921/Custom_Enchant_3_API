@@ -1,6 +1,7 @@
 package me.jaymar.ce3.Data.EntityData;
 
 import me.jaymar.ce3.Errors.SkillDataNotFound;
+import me.jaymar.ce3.PluginCore;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,6 +17,7 @@ import java.util.Map;
     movement speed
     player skills
  */
+
 public class CE_Player implements ConfigurationSerializable {
 
     private String uuid;
@@ -24,6 +26,8 @@ public class CE_Player implements ConfigurationSerializable {
     private double movement_speed;
     private double mana;
     private double max_mana;
+
+    private String player_class;
 
     private PlayerSkills skills;
 
@@ -38,13 +42,15 @@ public class CE_Player implements ConfigurationSerializable {
             double hp_regen,
             double mana_regen,
             double ms,
-            PlayerSkills skills
+            PlayerSkills skills,
+            String player_class
     ){
         this.uuid = uuid;
         health_regen = hp_regen;
         this.mana_regen = mana_regen;
         movement_speed = ms;
         this.skills = skills;
+        this.player_class = player_class;
         return this;
     }
 
@@ -78,10 +84,15 @@ public class CE_Player implements ConfigurationSerializable {
 
     public void setManaRegen(double val){mana_regen = val;}
 
+    public String getPlayer_class() {return player_class;}
+
+    public void setPlayer_class(String player_class) {this.player_class = player_class;}
+
     public @NotNull PlayerSkills getSkills(){
         if(skills!=null)
             return skills;
-        skills = new PlayerSkills(1,1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+        PluginCore.getPlugin(PluginCore.class).getLogger().info(new SkillDataNotFound().getMessage());
+        skills = new PlayerSkills(1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
         return skills;
     }
 
@@ -94,6 +105,7 @@ public class CE_Player implements ConfigurationSerializable {
         data.put("ManaRegen",mana_regen);
         data.put("MovementSpeed",movement_speed);
         data.put("Skills",skills);
+        data.put("PlayerClass", player_class);
         return data;
     }
 
@@ -103,7 +115,8 @@ public class CE_Player implements ConfigurationSerializable {
                 (double) args.get("HealthRegen"),
                 (double) args.get("ManaRegen"),
                 (double) args.get("MovementSpeed"),
-                (PlayerSkills) args.get("Skills")
+                (PlayerSkills) args.get("Skills"),
+                (String) args.get("PlayerClass")
         );
     }
 }
