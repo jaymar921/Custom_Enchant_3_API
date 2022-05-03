@@ -9,8 +9,6 @@ import java.util.List;
 
 public class CustomEnchantment {
 
-    public static final List<CustomEnchantWrapper> ENCHANTMENTS_LIST = new ArrayList<>();
-
     public static Enchantment LIFE_STEAL;
     public static Enchantment BLEED;
     public static Enchantment CRITICAL;
