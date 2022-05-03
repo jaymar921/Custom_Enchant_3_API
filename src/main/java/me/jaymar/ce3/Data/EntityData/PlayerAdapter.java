@@ -1,6 +1,7 @@
 package me.jaymar.ce3.Data.EntityData;
 
 import me.jaymar.ce3.Utility.CE_Utility;
+import me.jaymar.ce3.Enum.Class.Classes;
 import org.bukkit.Location;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.enchantments.Enchantment;
@@ -9,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
+import org.bukkit.entity.Entity;
 
 import java.util.HashMap;
 import java.util.Map;
