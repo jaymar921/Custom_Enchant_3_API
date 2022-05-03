@@ -204,21 +204,11 @@ public class PlayerAdapter{
     }
 
     public void addMovementSpeed(double ms, int time){
-        ce_player.setMovementSpeed(ms + getMovementSpeed());
-        new BukkitRunnable(){
-            public void run(){
-                ce_player.setMovementSpeed(getMovementSpeed() - ms);
-            }
-        }.runTaskLater(PluginCore.getPlugin(PluginCore.class),time*20L);
+        
     }
 
     public void addManaRegen(double manaRegen,int time){
-        ce_player.setManaRegen(manaRegen + getManaRegen());
-        new BukkitRunnable(){
-            public void run(){
-                ce_player.setManaRegen(getManaRegen()-manaRegen);
-            }
-        }.runTaskLater(PluginCore.getPlugin(PluginCore.class), 20L * time);
+        
     }
 
     public void setAttackSpeed(double value){
