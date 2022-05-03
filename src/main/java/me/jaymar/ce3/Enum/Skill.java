@@ -1,6 +1,5 @@
 package me.jaymar.ce3.Enum;
 
-import me.jaymar.ce3.Config.CEConfiguration;
 import me.jaymar.ce3.Data.EntityData.PlayerAdapter;
 import me.jaymar.ce3.Data.Language.LanguageData;
 import me.jaymar.ce3.Enum.Class.Classes;
@@ -60,9 +59,7 @@ public enum Skill {
     }
 
     public static double getManaCost(double mana_cost, int enchant_level, PlayerAdapter playerAdapter){
-        double cost = (CEConfiguration.ManaCostMultiplierPerLevel * (enchant_level-1)) * mana_cost; // getting the mana cost plus multiplier per enchant level
-        cost = cost>0 ? cost:mana_cost;
-        cost = cost - (cost*(0.001*playerAdapter.getSkills().INTELLIGENCE)); // cost reduction by 10% per level on mage skill
+        double cost = 0;
         return cost;
     }
 
