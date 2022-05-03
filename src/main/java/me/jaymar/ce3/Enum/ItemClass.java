@@ -13,5 +13,8 @@ public enum ItemClass {
     CHESTPLATE,
     LEGGINGS,
     BOOTS,
+    HOE,
+    PICKAXE,
+    AXE,
     GENERIC
 }
