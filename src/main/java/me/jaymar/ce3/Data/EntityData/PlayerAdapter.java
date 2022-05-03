@@ -224,9 +224,6 @@ public class PlayerAdapter{
     public void setAttackSpeed(double value){
         getPlayer().getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(4 + value);
     }
-    public World getWorld(){
-        return player.getWorld();
-    }
 
     public Classes getPlayerClass(){
         return Classes.valueOf(ce_player.getPlayer_class());
