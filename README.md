@@ -15,7 +15,7 @@
 <dependency>
   <groupId>com.github.jaymar921</groupId>
   <artifactId>Custom_Enchant_3_API</artifactId>
-  <version>2538730740</version>
+  <version>8b38c9342c</version>
 </dependency>
 ```
 [![](https://jitpack.io/v/jaymar921/Custom_Enchant_3_API.svg)](https://jitpack.io/#jaymar921/Custom_Enchant_3_API)
