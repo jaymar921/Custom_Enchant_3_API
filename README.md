@@ -1,5 +1,19 @@
 # Custom Enchantments 3 API
 > By: JayMar921
+> Resource Link: [Custom Enchantments 3](https://www.spigotmc.org/resources/102275/)
+# About
+> This plugin is basically an advanced version of the previous custom enchantments 1 and 2 developed by JayMar921. The plugin is so called an advanced plugin because it has a built in Skilling System, Player Classifications, (CE Currencies/Quests [coming soon]) and an RPG feels in the game.​
+
+# Skill System
+> Skill System is new to Custom Enchants 3, it is used for players to upgrade their skills and focus on what attribute they want to focus. There are three (3) main attributes in the skill system which are STRENGTH, AGILITY, and INTELLIGENCE. The 3 main attributes also has three passive skills and players can only upgrade their passive skills depending on what classification they choose.
+
+> Note that the player can only unlock the class when they reached level 10 and above
+
+# Classification
+> Custom Enchantments now adopt RPG feels in-game, it now has classification players for them to focus on specific skill and enchantments(active skill). There are three (3) classification as of now and these are WARRIOR, ARCHER, and WIZARD. For WARRIOR class players, they can only use sword enchantments. For ARCHER class players, they can only use BOW enchantments. For WIZARD class players, they can only use magic enchantments, all players can use fireball. ARMOR/SHIELD/TRIDENT/TOOL enchantments are global.
+Enchantments (Active Skills)
+Enchantments and Active Skills can be called interchangeably in the plugin. There are some enchantments that needs a certain class to be used by the players such as the SWORD, BOW and MAGIC enchantments. Magic Damage is 3 times the physical damage (vanilla damage).
+
 #### POM.XML
 > Maven Repository
 ```gradle
