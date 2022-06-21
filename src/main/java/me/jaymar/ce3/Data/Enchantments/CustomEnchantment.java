@@ -12,7 +12,7 @@ public class CustomEnchantment {
 
     public static final List<CustomEnchantWrapper> ENCHANTMENTS_LIST = new ArrayList<>();
 
-    public static final Enchantment LIFE_STEAL = new CustomEnchantWrapper("life_steal","Life Steal",3, ItemClass.SWORD, ChatColor.RED);
+        public static final Enchantment LIFE_STEAL = new CustomEnchantWrapper("life_steal","Life Steal",3, ItemClass.SWORD, ChatColor.RED);
     public static final Enchantment BLEED = new CustomEnchantWrapper("bleed","Bleed",3, ItemClass.SWORD,ChatColor.RED);
     public static final Enchantment CRITICAL = new CustomEnchantWrapper("critical","Critical",5, ItemClass.SWORD,ChatColor.WHITE);
     public static final Enchantment POISON = new CustomEnchantWrapper("poison","Poison",2, ItemClass.SWORD,ChatColor.GREEN);
@@ -55,6 +55,12 @@ public class CustomEnchantment {
     public static final Enchantment JUGGERNAUT = new CustomEnchantWrapper("juggernaut","Juggernaut", 8, ItemClass.SWORD,ChatColor.DARK_RED);
     public static final Enchantment WIND_SLASHER = new CustomEnchantWrapper("wind_slasher","Wind Slasher", 3, ItemClass.SWORD,ChatColor.GRAY);
     public static final Enchantment FIREBALL = new CustomEnchantWrapper("fire_ball","Fire Ball", 10, ItemClass.WAND,ChatColor.RED);
+    public static final Enchantment STELLA = new CustomEnchantWrapper("stella","Stella", 1, ItemClass.BOW,ChatColor.DARK_PURPLE);
+    public static final Enchantment FARMLAND = new CustomEnchantWrapper("farmland","Farmland", 2, ItemClass.HOE,ChatColor.GREEN);
+    public static final Enchantment BLACK_HOLE = new CustomEnchantWrapper("black_hole","Black Hole", 5, ItemClass.WAND,ChatColor.LIGHT_PURPLE);
+    public static final Enchantment FALLING_STAR = new CustomEnchantWrapper("falling_star","Falling Star", 5, ItemClass.WAND,ChatColor.LIGHT_PURPLE);
+    public static final Enchantment TELEPATHY = new CustomEnchantWrapper("telepathy","Telepathy", 1, ItemClass.TOOL,ChatColor.GRAY);
+
 
 
 }
